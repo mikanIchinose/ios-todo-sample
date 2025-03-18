@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F5B8B8402D89A04300B1FFC0 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = F5B8B83F2D89A04300B1FFC0 /* Sample */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F530227B2D887AC00069C586 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B8B8402D89A04300B1FFC0 /* Sample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				F530226A2D887ABA0069C586 /* ios-todo-sample */,
 				F530227D2D887AC00069C586 /* ios-todo-sampleTests */,
 				F53022872D887AC00069C586 /* ios-todo-sampleUITests */,
+				F5F6B4B72D899C040064BF16 /* Frameworks */,
 				F53022692D887ABA0069C586 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +110,13 @@
 			path = Feature;
 			sourceTree = "<group>";
 		};
+		F5F6B4B72D899C040064BF16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +137,7 @@
 			);
 			name = "ios-todo-sample";
 			packageProductDependencies = (
+				F5B8B83F2D89A04300B1FFC0 /* Sample */,
 			);
 			productName = "ios-todo-sample";
 			productReference = F53022682D887ABA0069C586 /* ios-todo-sample.app */;
@@ -207,6 +221,8 @@
 			);
 			mainGroup = F530225F2D887ABA0069C586;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F53022692D887ABA0069C586 /* Products */;
 			projectDirPath = "";
@@ -564,6 +580,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5B8B83F2D89A04300B1FFC0 /* Sample */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Sample;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F53022602D887ABA0069C586 /* Project object */;
 }
