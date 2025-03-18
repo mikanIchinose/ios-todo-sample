@@ -27,6 +27,7 @@
 		F53022682D887ABA0069C586 /* ios-todo-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-todo-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F530227A2D887AC00069C586 /* ios-todo-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-todo-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53022842D887AC00069C586 /* ios-todo-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-todo-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58105B22D89121100E04BC1 /* Todo */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		F530225F2D887ABA0069C586 = {
 			isa = PBXGroup;
 			children = (
+				F58105B12D8911FA00E04BC1 /* Feature */,
 				F530226A2D887ABA0069C586 /* ios-todo-sample */,
 				F530227D2D887AC00069C586 /* ios-todo-sampleTests */,
 				F53022872D887AC00069C586 /* ios-todo-sampleUITests */,
@@ -90,6 +92,14 @@
 				F53022842D887AC00069C586 /* ios-todo-sampleUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F58105B12D8911FA00E04BC1 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				F58105B22D89121100E04BC1 /* Todo */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
