@@ -7,8 +7,9 @@ let gradientColors: [Color] = [
     Color("GradientBottom", bundle: .module),
 ]
 
-struct Sample : View {
-    var body: some View {
+public struct Sample : View {
+    public init() {}
+    public var body: some View {
         TabView {
             WelcomePage()
             FeaturePage()
