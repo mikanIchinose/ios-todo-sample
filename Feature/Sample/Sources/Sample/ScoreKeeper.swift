@@ -18,7 +18,9 @@ struct ScoreKeeper: View {
         .bold()
         .padding(.bottom)
 
-      SettingView(startingPoints: $startingPoints)
+      SettingView(
+        doesHighestScoreWin: $scoreboard.doesHighestScoreWin,
+        startingPoints: $startingPoints)
 
       Grid {
         GridRow {
@@ -30,7 +32,13 @@ struct ScoreKeeper: View {
 
         ForEach($scoreboard.players) { $player in
           GridRow {
-            TextField("Name", text: $player.name)
+            HStack {
+              if scoreboard.winners.contains(player) {
+                Image(systemName: "crown.fill")
+                  .foregroundStyle(.yellow)
+              }
+              TextField("Name", text: $player.name)
+            }
             Text("\(player.score)")
             Stepper("\(player.score)", value: $player.score)
               .labelsHidden()
@@ -66,6 +74,7 @@ struct ScoreKeeper: View {
 }
 
 struct SettingView: View {
+  @Binding var doesHighestScoreWin: Bool
   @Binding var startingPoints: Int
 
   var body: some View {
@@ -73,6 +82,14 @@ struct SettingView: View {
       Text("Game Rules")
         .font(.headline)
       Divider()
+
+      Picker("Win condition", selection: $doesHighestScoreWin) {
+        Text("Highest Score Wins")
+          .tag(true)
+        Text("Lowest Score Wins")
+          .tag(false)
+      }
+
       Picker("Starting points", selection: $startingPoints) {
         Text("0 starting points")
           .tag(0)
@@ -92,6 +109,9 @@ struct SettingView: View {
 }
 
 #Preview {
+  @Previewable @State var doesHighestScoreWin: Bool = true
   @Previewable @State var startingPoints = 10
-  SettingView(startingPoints: $startingPoints)
+  SettingView(
+    doesHighestScoreWin: $doesHighestScoreWin,
+    startingPoints: $startingPoints)
 }
