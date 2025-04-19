@@ -20,4 +20,12 @@ class Friend {
   var isBirthdayToday: Bool {
     Calendar.current.isDateInToday(birthday)
   }
+
+  @MainActor static let sampleData = [
+    Friend(name: "Elena", birthday: Date.now),
+    Friend(name: "Graham", birthday: Date.now),
+    Friend(name: "Mayuri", birthday: Date.now),
+    Friend(name: "Rich", birthday: Date.now),
+    Friend(name: "Rody", birthday: Date.now),
+  ]
 }
